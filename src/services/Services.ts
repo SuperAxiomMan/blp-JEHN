@@ -1,11 +1,10 @@
 import fetch from 'node-fetch';
 import { readFileSync } from 'fs';
-import { resolve } from 'path';
 
 class Services {
-    static fetchStringField = async () => {
+    static fetchAPI = async () => {
         try {
-            const res = await fetch("");
+            const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
             const json = await res.json();
             console.log(json.results);
             return json;
@@ -14,17 +13,16 @@ class Services {
         }
     };
 
-    static fetchJsonFile = async () => {
+    static readLocalJson =  () => {
         try {
-            const res = await readFileSync(process.cwd()+"src/models/sample.json","utf-8");
-            console.log("coucou")
+            const res = readFileSync(process.cwd()+"/src/models/sample.json","utf-8")
+            const json = JSON.parse(res);
+            return json;
         } catch (e) {
             console.log(e);
         }
     };
-    static test = () => {
-      console.log('Hello')
-    }
+
 
 }
 

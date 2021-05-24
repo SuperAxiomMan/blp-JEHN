@@ -1,0 +1,12 @@
+<div class="container mt-2">
+  <div class="row">
+    <h1>API Response</h1>
+
+    <h6>Pokemon List</h6>
+    <ul>
+      {{#each results.results}}
+      <li>{{{capitalize this.name}}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

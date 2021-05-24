@@ -1,0 +1,41 @@
+<div class="container mt-2">
+  <div class="row">
+    <h1>Local JSON Response</h1>
+
+    <h6>Array</h6>
+    <ul>
+      {{#each results.array}}
+      <li>{{{this}}}</li>
+      {{/each}}
+    </ul>
+
+    <h6>Boolean</h6>
+    {{#if results.boolean}}
+    <p>The Boolean is {{{results.boolean}}}</p>
+    {{else}}
+    <p>The Boolean is {{{results.boolean}}}</p>
+    {{/if}}
+
+    <h6>Color</h6>
+    <p style="color: {{results.color}};">This sentence is colored in {{results.color}}</p>
+
+    <h6>Number</h6>
+    <p>{{results.number}} + 42 = {{plus results.number 42}}</p>
+    <p>{{results.number}} - 42 = {{minus results.number 42}}</p>
+    <p>{{results.number}} * 42 = {{multiply results.number 42}}</p>
+    <p>{{results.number}} / 42 = {{divide results.number 42}}</p>
+
+    <h6>Objects</h6>
+    <p>{{results.object}}</p>
+    <p>object a => {{results.object.a}}</p>
+    <p>object b => {{results.object.b}}</p>
+    <ul>
+      {{#each results.object}}
+      <li>{{{this}}}</li>
+      {{/each}}
+    </ul>
+
+    <h6>String</h6>
+    <p>{{{results.string}}}</p>
+  </div>
+</div>

@@ -1,16 +1,12 @@
 {
-    "array": [
-      1,
-      2,
-      3
-    ],
-    "boolean": true,
-    "color": "gold",
-    "null": null,
-    "number": 123,
-    "object": {
-      "a": "b",
-      "c": "d"
-    },
-    "string": "Hello World"
-  }
+  "array": [1, 2, 3],
+  "boolean": false,
+  "color": "red",
+  "null": null,
+  "number": 123,
+  "object": {
+    "a": "Item A",
+    "b": "Item B"
+  },
+  "string": "Hello World"
+}

@@ -10,16 +10,16 @@ const inHelpers = helpers();
 config({ path: 'variables.env' });
 
 //=|*Env Variables*|=//
-// const PORT = process.env.PORT || 3001;
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 //=|*Input*|=//
 const app = express();
 
 //=|*Middlewares*|=//
 //=|static folders/files/=>
-// app.use(express.static(resolve(process.cwd(), "/public")));
-app.use(express.static('public'));
+app.use(express.static(resolve(process.cwd(), "public")));
+// app.use(express.static('public'));
+
 
 //=|Body Parser/=>
 app.use(urlencoded({ extended: false }));
