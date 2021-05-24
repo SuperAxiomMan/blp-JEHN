@@ -4,13 +4,15 @@ import { Services } from '../services/Services';
 class Handler {
     //=|Root Page Response/=>
     static root = (req: Request, res: Response) => {
+        const resTest = Services.test
+        // console.log(resTest)
         res.render('home');
     };
     //=|Fetch JSON Data/=>
     static getSampleData = async (req: Request, res: Response) => {
         try {
-            const results = await Services.fetchStringField();
-
+            const results = await Services.fetchJsonFile;
+            // console.log("coucou")
             res.render('home', { results });
         } catch (e) {
             console.log(e);
